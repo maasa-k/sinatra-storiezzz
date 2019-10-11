@@ -14,8 +14,9 @@
 ActiveRecord::Schema.define(version: 20191011032126) do
 
   create_table "dreams", force: :cascade do |t|
-    t.string "post"
-    t.string "category"
+    t.string  "post"
+    t.string  "category"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

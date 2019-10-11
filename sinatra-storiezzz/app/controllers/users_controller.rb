@@ -8,7 +8,7 @@ class UsersController < ApplicationController
         @user = User.new(params)
         
         if @user.save
-            session[:user_id] = @user.user_id
+            session[:user_id] = @user.id
             redirect "/dreams"
         else
             erb :'/users/new'

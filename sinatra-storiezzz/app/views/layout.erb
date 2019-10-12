@@ -15,6 +15,19 @@
   </head>
   <body>
     <div class="wrapper">
+      <nav>
+        <ul>
+          <% if logged_in? %>
+            <li><a href="/dreams/all">All Dreams</a></li>
+            <li><a href="/dreams">My Dreams</a></li>
+            <li><a href="/dreams/new">New Dreams</a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">New Account</a></li>
+          <% end %>
+        </ul>
+      </nav>
 
         <%= yield %>
 

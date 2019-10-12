@@ -1,5 +1,6 @@
-<%= @dream.description %>
-
+<br>
+<p><%= @dream.description %></p>
+<br>
 <p><a href="/dreams/<%= @dream.id %>/edit">Edit</a></p>
 <form method="POST" action="/dreams/<%= @dream.id %>">
     <input type="hidden" name="_method" value="delete">

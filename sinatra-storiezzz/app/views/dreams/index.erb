@@ -1,19 +1,10 @@
-Welcome back, <%= @user.username %>!
-<br><br>
-
-Is there a dream you had that you'd like to keep in your Storiezzz?  Tell me about it <a href="/dreams/new">here</a>!
-<br><br>
-
-Any time you wish to reflect on your past Storiezzz, come see them <a href="/dreams">here</a>. 
-<br><br>
-
-Curious about what other people have been dreaming about lately?  Let's go check them out <a href="/dreams/all">here</a>!
-<br><br>
-
-<% @dreams.each do |dream| %>
-    <ul>
-        <li><%= dream.description %></li>
-    </ul>
+<% if @user %>
+    <h1>Hi, <%= @user.username %>!</h1>
+    <h2>Here is a collection of your Storiezzz</h2>
+<% else %>
+    <h2>Storiezzz by the Community</h2>
 <% end %>
 
-<a href="/logout">Logout</a>
+<% @dreams.each do |dream| %>
+    <p><a href="/dreams/<%= dream.id %>"><%= dream.description.split(" ")[0..4].join(" ")... %></a></p>
+<% end %>

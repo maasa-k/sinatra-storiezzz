@@ -11,6 +11,16 @@ class DreamsController < ApplicationController
         end
     end
 
+    post '/dreams' do
+        @dream = current_user.dreams.build(params)
+
+        if @dream.save
+            redirect "/dreams"
+        else
+            erb :'/dreams/new'
+        end
+    end
+
     get '/dreams/all' do 
         if logged_in? 
             @dreams = Dream.all 
@@ -35,16 +45,6 @@ class DreamsController < ApplicationController
         end
     end
 
-    post '/dreams' do
-        @dream = current_user.dreams.build(params)
-
-        if @dream.save
-            redirect "/dreams"
-        else
-            erb :'/dreams/new'
-        end
-    end
-
     get '/dreams/:id/edit' do 
         dream_user = Dream.find_by_id(params[:id]).user
 
@@ -52,6 +52,7 @@ class DreamsController < ApplicationController
             @dream = Dream.find_by_id(params[:id])
             erb :'/dreams/edit'
         else 
+            flash[:err] = "Oops! You can only edit your own Storiezzz."
             redirect "/dreams"
         end
     end

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id 
-            redirect '/dreams'
+            redirect '/dreams/index'
         else
             redirect '/login'
         end

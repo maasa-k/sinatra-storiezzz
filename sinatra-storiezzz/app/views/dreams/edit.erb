@@ -1,9 +1,7 @@
-<h1>My Dream Last Night...</h1>
-
-<form method="POST" action="/dreams">
-    <label for="description">Describe your Dream: </label>
-    <br>
-    <textarea name="description" id="description" value="<%= @dream ? @dream.description : ""%>" rows="4" cols="50"></textarea>
+<form method="POST" action="/dreams/<%= @dream.id %>">
+    <input type="hidden" id="hidden" name="_method" value="PATCH">
+    <label for="description">Description</label>
+   <textarea name="description" rows="4" cols="50"><%= @dream.description %></textarea>
     <br><br>
     <label for="category">What kind of dream was it?</label>
     <select name="category">
@@ -15,6 +13,6 @@
         <option value="sad">Sad</option>
         <option value="weird">Weird</option>
     </select>
-    <br>
-    <input type="submit" value="Save">
+
+    <input type="submit">
 </form>

@@ -1,4 +1,4 @@
 class Dream < ActiveRecord::Base
     belongs_to :user
-    validates :post, :category, presence: true
+    validates :description, :category, presence: true
 end 

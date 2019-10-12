@@ -1,5 +1,19 @@
-<a href="/dreams/new">Tell me about your dream!</a>
+Welcome back, <%= @user.username %>!
+<br><br>
+
+Is there a dream you had that you'd like to keep in your Storiezzz?  Tell me about it <a href="/dreams/new">here</a>!
+<br><br>
+
+Any time you wish to reflect on your past Storiezzz, come see them <a href="/dreams">here</a>. 
+<br><br>
+
+Curious about what other people have been dreaming about lately?  Let's go check them out <a href="/dreams/all">here</a>!
+<br><br>
 
 <% @dreams.each do |dream| %>
-    <%= dream.description %>
+    <ul>
+        <li><%= dream.description %></li>
+    </ul>
 <% end %>
+
+<a href="/logout">Logout</a>

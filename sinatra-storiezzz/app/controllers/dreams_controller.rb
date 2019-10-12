@@ -8,4 +8,9 @@ class DreamsController < ApplicationController
             erb :'/dreams/index'
         end
     end
+
+    get '/dreams/new' do 
+        @users = User.all 
+        erb :'/dreams/new'
+    end
 end

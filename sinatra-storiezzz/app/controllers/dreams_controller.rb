@@ -45,6 +45,20 @@ class DreamsController < ApplicationController
         end
     end
 
+    get '/dreams/category' do 
+        @dream = Dream.where(params[category: selection)
+
+        if @dream
+            erb :'/dreams/category'
+        else
+            redirect "/dreams"
+        end
+    end
+
+    post '/dreams/category' do 
+        erb :'/dreams/index'
+    end
+
     get '/dreams/:id/edit' do 
         dream_user = Dream.find_by_id(params[:id]).user
 
@@ -52,7 +66,7 @@ class DreamsController < ApplicationController
             @dream = Dream.find_by_id(params[:id])
             erb :'/dreams/edit'
         else 
-            flash[:err] = "Oops! You can only edit your own Storiezzz."
+            flash[:err] = "OOPS! You can only make changes to your own Storiezzz."
             redirect "/dreams"
         end
     end
@@ -66,6 +80,7 @@ class DreamsController < ApplicationController
             if @dream.update(params)
                 redirect "/dreams/#{@dream.id}"
             else
+                flash[:err] = "OOPS! You can only make changes to your own Storiezzz."
                 redirect "/dreams/#{@dream.id}/edit"
             end
         else
@@ -76,10 +91,11 @@ class DreamsController < ApplicationController
     delete '/dreams/:id' do 
         dream_user = Dream.find_by_id(params[:id]).user 
 
-        if dream_user.id =- current_user.id
+        if dream_user.id == current_user.id
             Dream.destroy(params[:id])
             redirect :'/dreams'
         else
+            flash[:err] = "OOPS! You can only make changes to your own Storiezzz."
             redirect "/dreams"
         end 
     end

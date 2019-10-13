@@ -5,13 +5,13 @@
     <br><br>
     <label for="category">What kind of dream was it?</label>
     <select name="category">
-        <option value="">Select One</option>
-        <option value="adventurous">Adventurous</option>
-        <option value="funny">Funny</option>
-        <option value="happy">Happy</option>
+        <option value=""><%= @dream.category %></option>
+        <option value="adventurous">adventurous</option>
+        <option value="funny">funny</option>
+        <option value="happy">happy</option>
         <option value="scary">scary</option>
-        <option value="sad">Sad</option>
-        <option value="weird">Weird</option>
+        <option value="sad">sad</option>
+        <option value="weird">weird</option>
     </select>
 
     <input type="submit">

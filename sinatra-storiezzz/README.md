@@ -1,4 +1,4 @@
-# Sinatra Storiezzz
+# Sinatra StorieZZZ
 
 Dreams are interesting, sometimes wild!  They can be mundane or totally freak you out.  Some are full of bliss, and then there are those that are just...bizarre.
 

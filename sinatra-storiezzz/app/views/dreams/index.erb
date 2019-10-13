@@ -4,26 +4,10 @@
 
 <% if @user %>
     <h1>Hi, <%= @user.username %>!</h1>
-    <h2>Here is a collection of your Storiezzz</h2>
+    <h2>Here is a collection of your StorieZZZ</h2>
 <% else %>
-    <h2>Storiezzz by the Community</h2>
+    <h2>StorieZZZ by the Community</h2>
 <% end %>
-
-<form method="POST" action="/dreams/category">
-<label for="selection">Category Filter</label>
-<select name="selection">
-    <option value="">Select One</option>
-    <option value="adventurous">Adventurous</option>
-    <option value="funny">Funny</option>
-    <option value="happy">Happy</option>
-    <option value="nightmare">Nightmare</option>
-    <option value="sad">Sad</option>
-    <option value="weird">Weird</option>
-</select>
-<input type="submit">
-</form>
-<br>
-<br>
 
 <% @dreams.each do |dream| %>
     <p><a href="/dreams/<%= dream.id %>"><%= dream.description.split(" ")[0..4].join(" ")... %></a> (<%= dream.category %>)</p>

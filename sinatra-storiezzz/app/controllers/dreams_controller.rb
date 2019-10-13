@@ -45,20 +45,6 @@ class DreamsController < ApplicationController
         end
     end
 
-    get '/dreams/category' do 
-        @dream = Dream.where(params[category: selection)
-
-        if @dream
-            erb :'/dreams/category'
-        else
-            redirect "/dreams"
-        end
-    end
-
-    post '/dreams/category' do 
-        erb :'/dreams/index'
-    end
-
     get '/dreams/:id/edit' do 
         dream_user = Dream.find_by_id(params[:id]).user
 

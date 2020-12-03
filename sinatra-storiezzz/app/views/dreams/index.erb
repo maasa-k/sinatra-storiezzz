@@ -1,13 +1,28 @@
-<% if flash.has?(:err) %>
-    <h3 style="color: red;"><%= flash[:err] %></h3>
+<% if flash.has?(:error) %>
+    <h3 style="color: #cc2900;"><%= flash[:error] %></h3>
 <% end %>
 
+<br>
 <% if @user %>
-    <h1>Hi, <%= @user.username %>!</h1>
-    <h2>Here is a collection of your StorieZZZ</h2>
+    <h2>Hi, <%= @user.username %>!
+    <br>
+    Here is a collection of your StorieZZZ</h2>
 <% else %>
     <h2>StorieZZZ by the Community</h2>
 <% end %>
+
+<form action="/dreams/category" method="POST">
+    <select name="category">
+        <option value="">select one</option>
+        <option value="adventurous">adventurous</option>
+        <option value="funny">funny</option>
+        <option value="happy">happy</option>
+        <option value="scary">scary</option>
+        <option value="sad">sad</option>
+        <option value="weird">weird</option>
+    </select>
+    <input type="submit" value="Search">
+</form>
 
 <% @dreams.each do |dream| %>
     <p><a href="/dreams/<%= dream.id %>"><%= dream.description.split(" ")[0..4].join(" ")... %></a> (<%= dream.category %>)</p>

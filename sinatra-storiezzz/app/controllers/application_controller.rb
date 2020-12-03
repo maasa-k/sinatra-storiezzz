@@ -22,6 +22,18 @@ class ApplicationController < Sinatra::Base
     def current_user
       @user ||= User.find_by_id(session[:user_id])
     end
+
+    def authenticate
+      redirect '/signup' if !logged_in?
+    end
+
+    def authorize(resource)
+      authenticate 
+      if resource.user != current_user
+        flash[:error] = "OOPS! You can only make changes to your own Storiezzz."
+        redirect '/dreams'
+      end
+    end
   end
 
 end

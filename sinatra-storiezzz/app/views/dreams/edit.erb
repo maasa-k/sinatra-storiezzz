@@ -1,11 +1,14 @@
+<br>
+
 <form method="POST" action="/dreams/<%= @dream.id %>">
     <input type="hidden" id="hidden" name="_method" value="PATCH">
     <label for="description">Description</label>
+    <br>
    <textarea name="description" rows="4" cols="50"><%= @dream.description %></textarea>
     <br><br>
     <label for="category">What kind of dream was it?</label>
     <select name="category">
-        <option value=""><%= @dream.category %></option>
+        <option value="">select one</option>
         <option value="adventurous">adventurous</option>
         <option value="funny">funny</option>
         <option value="happy">happy</option>
@@ -13,6 +16,7 @@
         <option value="sad">sad</option>
         <option value="weird">weird</option>
     </select>
+    <br>
 
-    <input type="submit">
+    <input type="submit" value="Save Changes">
 </form>

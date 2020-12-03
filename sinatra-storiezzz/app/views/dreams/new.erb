@@ -1,21 +1,23 @@
 <br>
 <h2>My Dream Last Night...</h2>
 
-<form method="POST" action="/dreams">
-    <label for="description">Describe your Dream: </label>
-    <br>
-    <textarea name="description" id="description" value="<%= @dream ? @dream.description : ""%>" rows="4" cols="50"></textarea>
-    <br><br>
-    <label for="category">What kind of dream was it?</label>
-    <select name="category">
-        <option value="">select one</option>
-        <option value="adventurous">adventurous</option>
-        <option value="funny">funny</option>
-        <option value="happy">happy</option>
-        <option value="scary">scary</option>
-        <option value="sad">sad</option>
-        <option value="weird">weird</option>
-    </select>
-    <br>
-    <input type="submit" value="Save">
+<form class="pure-form" method="POST" action="/dreams">
+    <fieldset>
+        <label for="description">Describe your Dream: </label>
+        <br>
+        <textarea class="pure-input-1-2" name="description" id="description" value="<%= @dream ? @dream.description : ""%>" rows="4" cols="50"></textarea>
+        <br><br>
+        <label for="category">What kind of dream was it?</label>
+        <select name="category">
+            <option value="">select one</option>
+            <option value="adventurous">adventurous</option>
+            <option value="funny">funny</option>
+            <option value="happy">happy</option>
+            <option value="scary">scary</option>
+            <option value="sad">sad</option>
+            <option value="weird">weird</option>
+        </select>
+        <br>
+        <button class="pure-button pure-button-primary" type="submit" value="Save">Save</button>
+    </fieldset>
 </form>

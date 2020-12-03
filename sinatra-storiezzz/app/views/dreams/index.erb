@@ -11,17 +11,19 @@
     <h2>StorieZZZ by the Community</h2>
 <% end %>
 
-<form action="/dreams/category" method="POST">
-    <select name="category">
-        <option value="">select one</option>
-        <option value="adventurous">adventurous</option>
-        <option value="funny">funny</option>
-        <option value="happy">happy</option>
-        <option value="scary">scary</option>
-        <option value="sad">sad</option>
-        <option value="weird">weird</option>
-    </select>
-    <input type="submit" value="Search">
+<form class="pure-form" action="/dreams/category" method="POST">
+    <fieldset>
+        <select name="category">
+            <option value="">select one</option>
+            <option value="adventurous">adventurous</option>
+            <option value="funny">funny</option>
+            <option value="happy">happy</option>
+            <option value="scary">scary</option>
+            <option value="sad">sad</option>
+            <option value="weird">weird</option>
+        </select>
+        <button class="pure-button pure-button-primary" type="submit" value="Search">Search</button>
+    </fieldset>
 </form>
 
 <% @dreams.each do |dream| %>

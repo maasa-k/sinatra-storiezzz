@@ -1,12 +1,18 @@
 <br>
 <h2>Login to StorieZZZ</h2>
 
-<form method="POST" action="/sessions">
-    <label for="email">Email: </label>
-    <input name="email" id="email" type="text">
-    <br>
-    <label for="password">Password: </label>
-    <input name="password" id="password" type="password">
-    <br>
-    <input type="submit" value="Log In">
+<form class="pure-form pure-form-aligned" method="POST" action="/sessions">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="email">Email: </label>
+            <input name="email" id="email" type="text">
+        </div>
+        <div class="pure-control-group">
+            <label for="password">Password: </label>
+            <input name="password" id="password" type="password">
+        </div>
+        <div class="pure-controls">
+            <input type="submit" value="Log In">
+        </div>
+    </fieldset>
 </form>

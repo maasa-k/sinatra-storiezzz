@@ -70,8 +70,7 @@ class DreamsController < ApplicationController
 
     post '/dreams/category' do
         @dreams = Dream.where(category: params[:category])
-        # @user = current_user
-
+        
         erb :'/dreams/index'
     end
 

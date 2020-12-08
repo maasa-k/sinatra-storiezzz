@@ -4,10 +4,13 @@
     </div>
 </div>
 
-<% if @dream.user == current_user %>
-<p><a href="/dreams/<%= @dream.id %>/edit">Edit</a></p>
-<form method="POST" action="/dreams/<%= @dream.id %>">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete">
-</form>
-<% end %>
+<div class="show-buttons">
+    <% if @dream.user == current_user %>
+    <a class="pure-button edit-btn" href="/dreams/<%= @dream.id %>/edit">Edit</a>
+    
+    <form method="POST" action="/dreams/<%= @dream.id %>">
+        <input type="hidden" name="_method" value="delete">
+        <button class="pure-button delete-btn" type="submit" value="Delete">Delete</button>
+    </form>
+    <% end %>
+</div>

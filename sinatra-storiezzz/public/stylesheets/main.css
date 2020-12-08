@@ -165,7 +165,29 @@
 }
 
 .show-dream {
-  margin-top: 5em;
+  margin-top: 3.5em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 1.5em;
   text-align: center;
   font-size: large;
+  background-color: rgba(240, 243, 245, 0.466);
+}
+
+.show-buttons {
+  text-align: center;
+}
+
+.edit-btn {
+  background: rgba(58, 134, 233, 0.795);
+  float: left;
+  margin-left: 25em;
+  margin-bottom: 3em;
+}
+
+.delete-btn {
+  background: rgb(202, 60, 60);
+  float: right;
+  margin-right: 25em;
+  margin-bottom: 3em;
 }

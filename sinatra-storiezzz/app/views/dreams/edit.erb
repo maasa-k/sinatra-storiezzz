@@ -1,22 +1,28 @@
 <br>
 
-<form method="POST" action="/dreams/<%= @dream.id %>">
-    <input type="hidden" id="hidden" name="_method" value="PATCH">
-    <label for="description">Description</label>
-    <br>
-   <textarea name="description" rows="4" cols="50"><%= @dream.description %></textarea>
-    <br><br>
-    <label for="category">What kind of dream was it?</label>
-    <select name="category">
-        <option value="">select one</option>
-        <option value="adventurous">adventurous</option>
-        <option value="funny">funny</option>
-        <option value="happy">happy</option>
-        <option value="scary">scary</option>
-        <option value="sad">sad</option>
-        <option value="weird">weird</option>
-    </select>
-    <br>
+<form class="pure-form pure-form-aligned" method="POST" action="/dreams/<%= @dream.id %>">
+    <fieldset>
+        <div class="pure-control-group">
+            <input type="hidden" id="hidden" name="_method" value="PATCH">
+            <label for="description">Description</label>
+    
+            <textarea name="description" rows="4" cols="50"><%= @dream.description %></textarea>
+        </div>
+        <div class="pure-control-group">
+            <label for="category">What kind of dream was it?</label>
+            <select name="category">
+                <option value="">select one</option>
+                <option value="adventurous">adventurous</option>
+                <option value="funny">funny</option>
+                <option value="happy">happy</option>
+                <option value="scary">scary</option>
+                <option value="sad">sad</option>
+                <option value="weird">weird</option>
+            </select>
+        </div>
+        <div class="pure-controls">
+            <button class="pure-button pure-button-primary" type="submit" value="Save Changes">Save Changes</button>
+        </div>
+    </fieldset>
 
-    <input type="submit" value="Save Changes">
 </form>

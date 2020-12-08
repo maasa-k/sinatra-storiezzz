@@ -1,15 +1,21 @@
 <h1>Create Your Account</h1>
 
-<form method="POST" action="/users">
-    <label for="username">Username: </label>
-    <input name="username" id="username" type="text">
-    <br>
-    <label for="email">Email: </label>
-    <input name="email" id="email" type="text">
-    <br>
-    <label for="password">Password: </label>
-    <input name="password" id="password" type="password">
-    <br>
-    <br>
-    <input type="submit" value="Create Account">
+<form class="pure-form pure-form-aligned" method="POST" action="/users">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="username">Username: </label>
+            <input name="username" id="username" type="text">
+        </div>
+        <div class="pure-control-group">
+            <label for="email">Email: </label>
+            <input name="email" id="email" type="text">
+        </div>
+        <div class="pure-control-group">
+            <label for="password">Password: </label>
+            <input name="password" id="password" type="password">
+        </div>
+        <div class="pure-controls">
+            <button class="pure-button pure-button-primary" type="submit" value="Create Account">Create Account</button>
+        </div>
+    </fieldset>
 </form>

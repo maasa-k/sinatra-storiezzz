@@ -8,11 +8,13 @@
     <br>
     Here is a collection of your StorieZZZ</h2>
 <% else %>
-    <h2>StorieZZZ by the Community</h2>
+    <h2>StorieZZZ of the Community</h2>
 <% end %>
 
-<form class="pure-form" action="/dreams/category" method="POST">
+<form class="pure-form category-form" action="/dreams/category" method="POST">
     <fieldset>
+        <label for="category">Search by Category</label>
+        <br>
         <select name="category">
             <option value="">select one</option>
             <option value="adventurous">adventurous</option>
@@ -22,10 +24,15 @@
             <option value="sad">sad</option>
             <option value="weird">weird</option>
         </select>
+        <br>
         <button class="pure-button pure-button-primary" type="submit" value="Search">Search</button>
     </fieldset>
 </form>
 
-<% @dreams.each do |dream| %>
-    <p><a href="/dreams/<%= dream.id %>"><%= dream.description.split(" ")[0..4].join(" ")... %></a> (<%= dream.category %>)</p>
-<% end %>
+<div class="pure-g">
+    <div class="pure-u l-box">
+        <% @dreams.each do |dream| %>
+            <p><a href="/dreams/<%= dream.id %>"><%= dream.description.split(" ")[0..4].join(" ")... %></a> (<%= dream.category %>)</p>
+    <% end %>
+    </div>
+</div>

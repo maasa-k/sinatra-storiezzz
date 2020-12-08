@@ -152,3 +152,20 @@
     line-height: 24px;
   }
 }
+
+.pure-g > div {
+  box-sizing: border-box;
+}
+.l-box {
+  padding: 1em;
+}
+
+.category-form {
+  text-align: center;
+}
+
+.show-dream {
+  margin-top: 5em;
+  text-align: center;
+  font-size: large;
+}

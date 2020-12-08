@@ -1,5 +1,8 @@
-<br>
-<p><%= @dream.description %></p>
+<div class="show-dream">
+    <div class="1-box">
+        <p><%= @dream.description %></p>
+    </div>
+</div>
 
 <% if @dream.user == current_user %>
 <p><a href="/dreams/<%= @dream.id %>/edit">Edit</a></p>

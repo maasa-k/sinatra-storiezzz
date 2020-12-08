@@ -1,12 +1,10 @@
 <br>
 <h2>My Dream Last Night...</h2>
 
-<form class="pure-form" method="POST" action="/dreams">
-    <fieldset>
-        <label for="description">Describe your Dream: </label>
+<form class="pure-form pure-form-stacked" method="POST" action="/dreams">
+    <fieldset class="pure-group">
+        <textarea class="pure-input-1-2" name="description" id="description" placeholder="Describe your dream here" value="<%= @dream ? @dream.description : ""%>" rows="4" cols="50"></textarea>
         <br>
-        <textarea class="pure-input-1-2" name="description" id="description" value="<%= @dream ? @dream.description : ""%>" rows="4" cols="50"></textarea>
-        <br><br>
         <label for="category">What kind of dream was it?</label>
         <select name="category">
             <option value="">select one</option>
@@ -17,7 +15,6 @@
             <option value="sad">sad</option>
             <option value="weird">weird</option>
         </select>
-        <br>
-        <button class="pure-button pure-button-primary" type="submit" value="Save">Save</button>
     </fieldset>
+        <button class="pure-button pure-button-primary" type="submit" value="Save">Save</button>
 </form>

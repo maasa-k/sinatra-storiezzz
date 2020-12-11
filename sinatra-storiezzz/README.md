@@ -1,8 +1,8 @@
 # Sinatra StorieZZZ
 
-Dreams are interesting, sometimes wild!  They can be mundane or totally freak you out.  Some are full of bliss, and then there are those that are just...bizarre.
+Sinatra StorieZZZ is a dream-logging web application that was built using the Sinatra library.  The Corneal gem was utilized to begin the framework.
 
-We all experience stories during our hours of slumber, whether they are perfectly coherent or completely nonsensical.  Use this web application to memorialize them!  
+<img src="public/images/new-dream-screenshot.jpg" alt="Screenshot of New Dream Form" style="width:60%;height:60%; display:block; margin-left:auto; margin-right:auto;">
 
 ## Installation
 
@@ -22,13 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-Use this Sinatra web application to post dreams you'd like to share with others or keep for your own eyes. 
+To start the server, simply run ` shotgun ` in your terminal.  Then you open the provided url or localhost number to open the app in your browser. 
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Sign up with a username, email and password in order to use this app.  Log in dreams by description and category, and these will be posted to the StorieZZZ Community anonymously.  Dreams can also be viewed by category. 
 
 ## Contributing
 
@@ -40,4 +36,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the SpcalaPets project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/maasa-k/spcala_pets/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Sinatra StorieZZZ project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/maasa-k/sinatra-storiezzz/blob/master/CODE_OF_CONDUCT.md).

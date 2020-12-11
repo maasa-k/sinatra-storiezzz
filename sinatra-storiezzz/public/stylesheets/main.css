@@ -119,6 +119,7 @@
     border-top: 2px solid #ccc;
     margin-top: 20px;
     padding-top: 20px;
+    text-align: center;
   }
 }
 
@@ -153,9 +154,19 @@
   }
 }
 
+.welcome > p {
+  text-align: center;
+  font-size: larger;
+}
+
+.pure-u > p {
+  font-size: 1.2em;
+}
+
 .pure-g > div {
   box-sizing: border-box;
 }
+
 .l-box {
   padding: 1em;
 }

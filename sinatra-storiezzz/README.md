@@ -2,7 +2,7 @@
 
 Sinatra StorieZZZ is a dream-logging web application that was built using the Sinatra library.  The Corneal gem was utilized to begin the framework.  Styling was enhanced with [Pure](https://purecss.io/). 
 
-<img src="public/images/new-dream-screenshot.jpg" alt="Screenshot of New Dream Form" style="width:60%;height:60%; display:block; margin-left:auto; margin-right:auto;">
+<img src="public/images/new-dream-screenshot.jpg" alt="Screenshot of New Dream Form" style="width:40%;height:40%; display:block; margin-left:auto; margin-right:auto;">
 
 ## Installation
 
